@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" >
+<head>
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DeltaMuAKAs.com | Coming Soon</title>
+
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  
+    <style>/* Set height to 100% for body and html to enable the background image to cover the whole page: */
+        body, html {
+            background-color: #cee6b788;
+            height: 100%;
+            margin:0;
+        }
+
+        .bgimg_in {
+            height:100%;
+            background-color: #cee6b788;
+        }
+
+        .bgimg {
+            /* Background image */
+            background-image: url('images/bg-ivyonbrick.jpg');
+            /* Full-screen */
+            height: 100%;
+            /* Center the background image */
+            background-position: center;
+            /* Scale and zoom in the image */
+            background-size: cover;
+            /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+            position: relative;
+            /* Add a white text color to all elements inside the .bgimg container */
+            color: white;
+            /* Add a font */
+            font-family: 'Poppins', sans-serif;
+            /* Set the font-size to 25 pixels */
+            font-size: 1.5em;
+        }
+        
+        /* Position text in the top-left corner */
+        .topleft {
+            position: absolute;
+            top: 0;
+            left: 1em;
+        }
+        
+        /* Position text in the bottom-left corner */
+        .bottomleft {
+            bottom: 0;
+            color: rgba(255, 192, 203, 1);
+            left: 1em;
+            position: absolute;
+        }
+        
+        /* Position text in the middle */
+        .middle {      
+            font-weight:bolder;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 100%;
+        }
+        
+        /* Style the <hr> element */
+        hr {
+            margin: auto;
+            width: 35%;
+        }
+
+        h1 {
+            font-size:3em;
+        }
+
+        .demo {
+            font-weight:bolder;
+            font-size:1.75em;
+        }
+
+        a {
+            color: pink;
+            text-decoration: none;
+        }
+
+        .copyright {
+            text-align:center;
+        }
+    </style>
+</head>
+<body id="top">
+    <div class="bgimg">
+        <div class="bgimg_in">
+            <div class="topleft">
+                <p><img src="images/logo_deltamuakas.com_squared_250x.png"></p>
+            </div>
+            <div class="middle">
+                <h1>COMING SOON</h1>
+                <hr />
+                <p>
+                    <span id="demo" class="demo">11/5/2021</span>
+                </p>
+            </div>
+            <div class="bottomleft">
+                <p>DeltaMuAKAs.com&nbsp;|&nbsp;<a href="https://aka1908.com/privacy-policy" target="_blank" title="Privacy Policy">Privacy Policy</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="copyright">
+            Copyright © 2021 Alpha Kappa Alpha Sorority, Inc. All Rights Reserved. Alpha Kappa Alpha Sorority, Inc. is not responsible for the design or content of this website. It is the sole responsibility of the Delta Mu Chapter that hosts and maintains it.
+        </div>
+    </footer>
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Nov 11, 2021").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+            // Get todays date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now an the count down date
+            var distance = (countDownDate - now);
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in an element with id="demo"
+            document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "VISIT DELTAMUAKAS(dot)COM";
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
